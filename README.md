@@ -24,9 +24,9 @@ In this repo, we will have two jupyter notebook
     A dropout layer is added.
   
   
-  3) Keras-kopt-3MCNe4-final.ipynb
+  3) Keras-kopt-3MCNet4-final.ipynb
   From last notebook, we learned that having 2 variables are not enough. Because the mentor/mentee's past history and their interaction play significant roles. However, we don't want to create a huge lookup table so we add in some dropout layers and some regulizers to avoid overfitting.
-  Our 3MCNet4(3MC Kopt tuned neural network with 4 variables) doesn't have a better MSE than XGBoost. 3MCNet perform close to perfection on non-outliers. 3MCNet4 wasn't optimized to reduce the MSE, instead it was attempting to reduce the huber_loss.
+  Our 3MCNet4(3MC Kopt tuned neural network with 4 variables) doesn't have a better MSE than XGBoost. 3MCNet perform close to perfection on non-outliers. 3MCNet4 wasn't optimized to reduce the MSE, instead it was attempting to reduce the huber_loss. It turns out that our 3MCNet4 performs better than XGBoost in term of getting correct prediction while being robust against outliers.
     
     $$L(y-\hat{y}) = \begin{cases} \frac{1}{2}(y-\hat{y})^2 & if &| y-\hat{y} | \leq \delta \\
                                \delta |y-\hat{y}| -\frac{1}{2} \delta^2 & o.w. \\
